@@ -213,7 +213,7 @@ class APIController extends Controller
 			]);
 
 			//fire an event that the term has been changed
-			Event::fire(new TermChanged($term, Auth::user()));
+			Event::dispatch(new TermChanged($term, Auth::user()));
 
 			return response()->json($termNew, 201);
 			exit();

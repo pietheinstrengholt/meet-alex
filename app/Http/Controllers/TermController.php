@@ -258,7 +258,7 @@ class TermController extends Controller
 		}
 
 		//fire an event that the term has been changed
-		Event::fire(new TermChanged($term, Auth::user()));
+		Event::dispatch(new TermChanged($term, Auth::user()));
 
 		//redirect based on the first character
 		if (!ctype_alpha(substr($request->input('term_name'), 0, 1))) {

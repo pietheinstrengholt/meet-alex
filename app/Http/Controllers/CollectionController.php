@@ -309,7 +309,7 @@ class CollectionController extends Controller
 		$collection->users()->attach($user->id);
 
 		//send notification to the user
-		Event::fire(new OwnerApprovedCollectionRights($collection, $user));
+		Event::dispatch(new OwnerApprovedCollectionRights($collection, $user));
 
 		//show distinct blade page
 		return Redirect::route('collections.show', $collection->id)->with('message', 'User has has been granted for this collection.');
@@ -384,7 +384,7 @@ class CollectionController extends Controller
 				if (!(in_array($user, explode(',', $collection->users->implode('id', ','))))) {
 					//fire an event that the term has been changed
 					$userObject = User::find($user);
-					Event::fire(new OwnerApprovedCollectionRights($collection, $userObject));
+					Event::dispatch(new OwnerApprovedCollectionRights($collection, $userObject));
 				}
 			}
 
@@ -426,7 +426,7 @@ class CollectionController extends Controller
 
 				//fire an event if an user has bookmarked the collection
 				if ($collections->receive_notifications == 1) {
-					Event::fire(new UserBookmarkedCollection($collection, Auth::user()));
+					Event::dispatch(new UserBookmarkedCollection($collection, Auth::user()));
 				}
 
 				return response()->json('bookmarked');
