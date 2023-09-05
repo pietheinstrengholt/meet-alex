@@ -173,7 +173,7 @@ return [
 
 		// ...
 		Collective\Html\HtmlServiceProvider::class,
-		Maatwebsite\Excel\ExcelServiceProvider::class,
+		//Maatwebsite\Excel\ExcelServiceProvider::class,
 		Laravel\Socialite\SocialiteServiceProvider::class,
 		Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
 		// ...
@@ -229,7 +229,7 @@ return [
 		// ...
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        //'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Settings' => App\Helpers\Settings::class,
         'Format' => App\Helpers\Format::class,
