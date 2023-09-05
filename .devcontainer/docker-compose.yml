@@ -9,6 +9,12 @@ services:
       # For use with PHP (e.g. `php -S localhost:8080`)
       - "8000:8000"
     command: sleep infinity
+    environment:
+        APP_ENV: local
+        PHP_EXTENSION_XDEBUG: 1
+        PHP_EXTENSION_PGSQL: 1
+        PHP_EXTENSION_PDO_PGSQL: 1
+        APACHE_DOCUMENT_ROOT: /workspace/public
   mariadb:
     image: mariadb:10.4
     expose:
