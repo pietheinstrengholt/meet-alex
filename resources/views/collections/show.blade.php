@@ -307,7 +307,9 @@
 		@endif
 
 		@can('contribute-to-collection', $collection)
-			<p class="visible-xs"><a href="{{ route('collections.terms.create', array($collection)) }}">Create Term</a></div></li>
+			@if ($collection)
+				<p class="visible-xs"><a href="{{ route('collections.terms.create', array($collection)) }}">Create Term</a></div></li>
+			@endif
 		@endcan
 	@endif
 

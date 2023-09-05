@@ -46,7 +46,7 @@ class DefaultRelationController extends Controller
 			abort(403, '403 Forbidden. Unauthorized action.');
 		}
 
-		return view('defaultrelations.create', compact('defaultrelation'));
+		return view('defaultrelations.create', compact('defaultRelation'));
 	}
 
 	public function store(Request $request)
