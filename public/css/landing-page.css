@@ -1,0 +1,281 @@
+/*!
+ * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+startpage.body,
+startpage.h1,
+startpage.h2,
+startpage.h3,
+startpage.h4,
+startpage.h5,
+startpage.h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.topnav {
+    font-size: 14px;
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.intro-header {
+    margin-top: -21px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 0px;
+    text-align: left;
+
+    /* background: url(../img/default.jpg) no-repeat center center; */
+    background-size: cover;
+}
+
+#intro-header-row {
+    color: #f8f8f8;
+}
+
+.intro-message, .bim-message {
+	position: relative;
+	padding-bottom: 20%;
+	padding-left: 5%;
+}
+
+.intro-message {
+	padding-top: 8%;
+}
+
+.intro-message > h1, .bim-message > h1 {
+	margin: 0;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+	font-size: 5em;
+}
+
+.intro-divider {
+	width: 400px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+hr.intro-divider {
+	margin-left: 0px;
+}
+
+#page-content {
+	margin-top: 40px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.intro-message > h3, .bim-message > h3 {
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+div#intro-header , div#intro-header-row, div#intro-header-col-lg-12 {
+	height: 425px;
+}
+
+div#footer, p.p-more-info, h3.center, p.center {
+	text-align: center;
+}
+
+@media(max-width:767px) {
+	.intro-message {
+		padding-bottom: 15%;
+		padding-left: 2%;
+	}
+
+	.intro-message > h1 {
+		font-size: 3em;
+	}
+
+	ul.intro-social-buttons > li {
+		display: block;
+		margin-bottom: 20px;
+		padding: 0;
+		float: left;
+		margin-right: 10px;
+	}
+
+	ul.intro-social-buttons > li:last-child {
+		margin-bottom: 0;
+	}
+
+	.intro-divider {
+		width: 100%;
+	}
+
+	.banner h2 {
+		margin: 0;
+		text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+		font-size: 3em;
+	}
+
+	ul.banner-social-buttons > li {
+		display: block;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+
+	ul.banner-social-buttons > li:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@media(max-width:1199px) {
+	ul.banner-social-buttons {
+		float: left;
+		margin-top: 15px;
+	}
+}
+
+.network-name {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2px;
+}
+
+.content-section-a {
+	padding: 20px 0;
+}
+
+.content-section-b {
+	padding: 50px 0;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+	margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+	float: left;
+	width: 200px;
+	border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+	padding: 100px 0;
+	color: #f8f8f8;
+	background: url(../img/banner-bg2.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.banner h2 {
+	margin: 0;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+	font-size: 3em;
+}
+
+.banner ul {
+	margin-bottom: 0;
+}
+
+.banner-social-buttons {
+	float: right;
+	margin-top: 0;
+}
+
+footer {
+	padding: 20px 0;
+}
+
+p.copyright {
+	margin: 15px 0 0;
+}
+
+div.alert.alert-danger {
+	margin-top: -61px;
+}
+
+html,body {
+	height:100%;
+}
+
+.row-flex, .row-flex > div[class*='col-'] {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex:1 1 auto;
+}
+
+.row-flex-wrap {
+	-webkit-flex-flow: row wrap;
+	align-content: flex-start;
+	flex:0;
+}
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+	 margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+	width:100%;
+}
+
+.flex-col {
+	display: flex;
+	display: -webkit-flex;
+	flex: 1 100%;
+	flex-flow: column nowrap;
+}
+
+.flex-grow {
+	display: flex;
+	-webkit-flex: 2;
+	flex: 2;
+}
+
+div.well {
+	line-height: 1.42857143;
+	background-color: #ffffff;
+	border: 1px solid #ecf0f1;
+	border-radius: 4px;
+}
+
+div.well p.center {
+	overflow: hidden;
+	max-height: 104px;
+}
+
+div.content-container {
+	margin-top:-20px;
+}
+
+p.muted.credit {
+	color: #999999;
+}
+
+p.muted.credit#top {
+	margin: 20px 0px 0px 0px;
+}
+
+p.muted.credit a.credit {
+	color:#0088cc;
+}
+
+div#page-content1 {
+	margin-top: 20px;
+}
+
+div#page-content2 {
+	margin: 0px;
+}
+
+img#pepper {
+	margin-bottom: 5px;
+	margin-left: 3px;
+}
+
+hr#home-divider {
+	margin-right:1000px;
+}
+
+span.glyphicon.home  {
+	margin-right:3px;
+}

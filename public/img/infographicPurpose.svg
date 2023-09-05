@@ -1,0 +1,103 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="400" height="500" viewBox="0 0 400 500" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<!-- relation arrowhead -->
+       <defs>
+         <marker id='head' orient="auto"
+           markerWidth='2' markerHeight='4'
+           refX='0.1' refY='2'>
+           <!-- triangle pointing right (+x) -->
+           <path d='M0,0 V4 L2,2 Z' fill="grey"/>
+         </marker>
+       </defs>
+
+<!-- RELATIONS -->
+
+      <!-- YOUR DATA to meet-Alex 70 90 200 150-->
+        <line x1="200" y1="150" x2="70" y2="90" marker-end='url(#head)' />
+        <rect x="100" y="110" rx="5" ry="5" width="60" height="18" class="relationbox"/>
+        <text x="100" y="110" dx="30" dy="11" class="relationtext">describes</text>
+
+      <!-- ONE PLACE to meet-Alex 340 79 200 150 -->
+        <line x1="200" y1="150" x2="330" y2="90" marker-end='url(#head)' />
+        <rect x="240" y="110" rx="5" ry="5" width="60" height="18" class="relationbox"/>
+        <text x="240" y="110" dx="30" dy="11" class="relationtext">is in</text>
+
+      <!-- SCALABILITY to meet-Alex -->
+        <line x1="200" y1="170" x2="200" y2="260" marker-end='url(#head)' />
+        <rect x="160" y="215" rx="5" ry="5" width="80" height="18" class="relationbox"/>
+        <text x="160" y="215" dx="40" dy="11" class="relationtext">features high</text>
+
+      <!-- POWER OF CROWD to SCALABLE -->
+        <line x1="70" y1="400" x2="185" y2="330" marker-end='url(#head)' />
+        <rect x="90" y="360" rx="5" ry="5" width="60" height="18" class="relationbox"/>
+        <text x="90" y="360" dx="30" dy="11" class="relationtext">enables</text>
+
+      <!-- EASE OF USE to SCALABLE -->
+        <line x1="200" y1="400" x2="200" y2="330" marker-end='url(#head)' />
+        <rect x="170" y="360" rx="5" ry="5" width="60" height="18" class="relationbox"/>
+        <text x="170" y="360" dx="30" dy="11" class="relationtext">enables</text>
+
+        <!-- OPEN SOURCE to SCALABLE -->
+        <line x1="330" y1="400" x2="215" y2="330" marker-end='url(#head)' />
+        <rect x="250" y="360" rx="5" ry="5" width="60" height="18" class="relationbox"/>
+        <text x="250" y="360" dx="30" dy="11" class="relationtext">enables</text>
+
+<!-- TERMS -->
+
+      <!-- YOUR DATA -->
+        <rect x="5" y="30" rx="10" ry="10" width="100" height="50" class="softbox"/>
+        <text x="5" y="30" dx="50" dy="30">your data</text>
+
+      <!-- ONE PLACE -->
+        <rect x="295" y="30" rx="10" ry="10" width="100" height="50" class="softbox"/>
+        <text x="295" y="30" dx="50" dy="30">one place</text>
+
+      <!-- SCALABILITY -->
+        <rect x="150" y="270" rx="10" ry="10" width="100" height="50" class="softbox"/>
+        <text x="150" y="270" dx="50" dy="30">scalability</text>
+
+      <!-- CROWD SOURCING -->
+        <rect x="5" y="400" rx="10" ry="10" width="100" height="50" class="softbox"/>
+        <text x="5" y="400" dx="50" dy="30">crowd sourcing</text>
+
+      <!-- EASE OF USE -->
+        <rect x="150" y="400" rx="10" ry="10" width="100" height="50" class="softbox"/>
+        <text x="150" y="400" dx="50" dy="30">ease of use</text>
+
+      <!-- OPEN SOURCE -->
+      <rect x="295" y="400" rx="10" ry="10" width="100" height="50" class="softbox"/>
+      <text x="295" y="400" dx="50" dy="30">open source</text>
+
+      <!-- PYRAMID -->
+      <image x="145" y="100" width="120" height="106.8" xlink:href="pyramid.svg" />
+
+
+
+<!-- CSS -->
+
+    <style type="text/css">
+
+      .softbox {
+        fill: #fff; stroke:#75B1E3; stroke-width:4;
+      }
+      .relationbox {
+        fill: grey;
+      }
+      .relationtext {
+        font-family:arial; font-size:10px; text-anchor:middle; fill:white;
+      }
+      line {
+        stroke:grey; stroke-width:4;
+      }
+      text {
+        font-family:arial; font-size:13px; text-anchor:middle; fill:grey;
+      }
+
+    </style>
+
+</svg>

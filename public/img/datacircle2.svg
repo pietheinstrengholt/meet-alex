@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+
+<svg width="400" height="400" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+       <g id="datagrowthSVG2_group">
+         <circle id="datacircle2" cx="200" cy="200" r="200" />
+         <text x="200" y="90">
+           <tspan x="200" dy="-45" >There must be</tspan>
+           <tspan x="200" dy="45" class="text-emphasis">millions</tspan>
+           <tspan x="200" dy="35">of data models</tspan>
+           <tspan x="200" dy="35">to manage all data...</tspan>
+           <tspan x="200" dy="45">Can you <tspan class="text-emphasis">connect</tspan> to</tspan>
+           <tspan x="200" dy="35">these data models</tspan>
+           <tspan x="200" dy="45">to <tspan class="text-emphasis">understand</tspan></tspan>
+           <tspan x="200" dy="45">and <tspan class="text-emphasis">locate</tspan></tspan>
+           <tspan x="200" dy="35">the data you need?</tspan>
+         </text>
+      </g>
+
+  <style>
+
+    circle {
+  		stroke: none;
+  		fill:#75B1E3;
+  	}
+    text {
+      font-family:arial;
+      font-size:24px;
+      text-anchor:middle;
+      fill:white;
+    }
+    .text-emphasis {
+      font-size:40px;
+      font-weight:bold;
+    }
+
+  </style>
+
+</svg>

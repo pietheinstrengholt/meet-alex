@@ -1,0 +1,318 @@
+/* Space out content a bit */
+body {
+	color: #2c3e50;
+}
+
+/* twitter-typeahead dropdown box on term-edit-page */
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+	margin-bottom: 0;
+}
+
+/* typeahead */
+div.term-box:hover p.term-termname, div.term-box:hover p.term-description {
+	color: #18bc9c !important;
+	cursor: pointer;
+}
+
+.tt-dropdown-menu {
+	width: 600px;
+	min-height:60px;
+	margin-top: 0px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+	display: block;
+	padding: 3px 20px;
+}
+
+.tt-suggestion :hover {
+	color: #66afe9;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+	color: #fff;
+	background-color: #0081c2;
+	background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+	background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+	background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+	background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0)
+}
+
+.tt-suggestion.tt-is-under-cursor a {
+  /* color: #fff; */
+}
+
+.tt-suggestion p {
+	margin: 0;
+}
+
+.tt-suggestions .term-collection {
+	float: right;
+	font-style: italic;
+}
+
+.tt-suggestions .term-termname {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.tt-suggestions .term-description {
+	margin: 0;
+}
+
+span.twitter-typeahead {
+	width: 100%;
+}
+
+.empty-message {
+	padding: 10px;
+}
+
+/* comment boxes */
+.detailBox {
+	border:1px solid #bbb;
+	margin-bottom:20px;
+}
+.titleBox {
+	background-color:#fdfdfd;
+	padding:10px;
+}
+.titleBox label{
+	color:#444;
+	margin:0;
+	display:inline-block;
+}
+
+.commentBox {
+	padding:10px;
+	border-top:1px dotted #bbb;
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+	width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+	width:18%;
+}
+.actionBox .form-group * {
+	width:100%;
+}
+.taskDescription {
+	margin-top:10px 0;
+}
+.commentList {
+	padding:0;
+	list-style:none;
+	overflow:auto;
+}
+.commentList li {
+	margin:0;
+	margin-top:10px;
+}
+.commentList li > div {
+	display:table-cell;
+}
+.commenterImage {
+	width:30px;
+	margin-right:5px;
+	height:100%;
+	float:left;
+}
+.commenterImage img {
+	width:100%;
+	border-radius:50%;
+}
+.commentText p {
+	margin:0;
+}
+.sub-text {
+	color:#aaa;
+	font-family:verdana;
+	font-size:11px;
+}
+.actionBox {
+	border-top:1px dotted #bbb;
+	padding:10px;
+}
+
+/* breadcrumb right dropdown */
+
+ul.breadcrumb li.right.dropdown {
+	float: right;
+}
+
+ul.breadcrumb li.right.dropdown a {
+	color: #95a5a6;
+}
+
+ul.breadcrumb li#status.right.dropdown:before {
+	display:none;
+}
+
+/* different badge labels */
+
+.label-as-badge {
+	border-radius: 1em;
+}
+
+/* bootstrap stars */
+
+.br-theme-bootstrap-stars .br-widget {
+	height: 28px;
+	white-space: nowrap;
+}
+.br-theme-bootstrap-stars .br-widget a {
+	font: normal normal normal 18px/1 'Glyphicons Halflings';
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	text-decoration: none;
+	margin-right: 2px;
+}
+.br-theme-bootstrap-stars .br-widget a:after {
+	content: '\e006';
+	color: #d2d2d2;
+}
+.br-theme-bootstrap-stars .br-widget a.br-active:after {
+	color: #EDB867;
+}
+.br-theme-bootstrap-stars .br-widget a.br-selected:after {
+	color: #EDB867;
+}
+.br-theme-bootstrap-stars .br-widget .br-current-rating {
+	display: none;
+}
+.br-theme-bootstrap-stars .br-readonly a {
+	cursor: default;
+}
+@media print {
+	.br-theme-bootstrap-stars .br-widget a:after {
+		content: '\e007';
+		color: black;
+	}
+	.br-theme-bootstrap-stars .br-widget a.br-active:after, .br-theme-bootstrap-stars .br-widget a.br-selected:after {
+		content: '\e006';
+		color: black;
+	}
+}
+
+a.navbar-brand-fake {
+	font-size: 15px;
+	line-height: 21px;
+	margin-left: 2px !important;
+}
+
+/* fix navbar collapsing point depends on predefined in bootstrap breakpoint */
+@media (max-width: 991px) {
+	.navbar-header {
+		float: none;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+	.navbar-collapse.collapse {
+		display: none!important;
+	}
+	.navbar-nav {
+		float: none!important;
+		margin: 7.5px -15px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.navbar-text {
+		float: none;
+		margin: 15px 0;
+	}
+	/* since 3.1.0 */
+	.navbar-collapse.collapse.in {
+		display: block!important;
+	}
+	.collapsing {
+		overflow: hidden!important;
+	}
+}
+
+.navbar-collapse {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+/* bim links */
+a.bim-link {
+   color: #2c3e50;
+   background-color: #eafcf9;
+   text-decoration: none !important;
+}
+
+/* footer */
+div#footer {
+	margin-bottom: 10px;
+}
+
+/* tinymce support */
+h4.tinymce p, h5.tinymce p {
+	font-family: inherit ! important;
+}
+
+/* make hyperlink in cookie white */
+div.alert.alert-success.alert-dismissible.text-center.fade.in a {
+	color:white;
+}
+
+/* buttons right in breadcrumb */
+div.button-right {
+	font-size: 18px;
+	margin-top: -3px;
+	float:left;
+	margin-left: 3px;
+}
+
+/* buttons to link or clone */
+div.edit-button-round {
+	margin-left: 3px;
+}
+
+div.copy-button-round, div.edit-button-round {
+	font-size: 18px;
+	margin-top: -3px;
+	float:left;
+}
+
+.submitLink {
+	background-color: transparent;
+	text-decoration: underline;
+	border: none;
+	color: blue;
+	cursor: pointer;
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: normal;
+	line-height: 1.42857143;
+	color: #7b8a8b;
+	white-space: nowrap;
+	text-decoration: none;
+}
+submitLink:focus {
+	outline: none;
+}

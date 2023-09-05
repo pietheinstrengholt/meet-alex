@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+
+<svg width="365" height="325" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+     <g id="pyramidSVG" fill="none" stroke="white">
+        <polygon id="topsection" points="182.5,0 113.15,123.5 251.85,123.5" />
+        <polygon id="midsection" points="104.025,139.75 260.975,139.75 312.075,230.75 52.92500000000001,230.75" />
+        <polygon id="bottomsectionA" points="43.80000000000001,247 0,325 109.5,325 153.3,247" />
+        <polygon id="bottomsectionB" points="321.2,247 365,325 255.5,325 211.7,247" />
+     </g>
+
+     <style>
+
+       #topsection {
+         fill: #7CC9B5;
+         stroke: white;
+         stroke-width: 5;
+       }
+       #midsection {
+         fill: #75B1E3;
+         stroke: white;
+         stroke-width: 5;
+       }
+       #bottomsectionA, #bottomsectionB {
+         fill: #5F6A76;
+         stroke: white;
+         stroke-width: 5;
+       }
+
+     </style>
+
+</svg>

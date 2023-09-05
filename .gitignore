@@ -1,0 +1,21 @@
+# Laravel 5 specific
+.env.*.php
+.env.php
+.env
+/public/storage
+/public/hot
+/public/img/upload
+/storage/*.key
+vendor/
+node_modules/
+/storage/*.key
+/.idea
+Homestead.yaml
+Homestead.json
+
+# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
+.rocketeer/
+
+
+
+

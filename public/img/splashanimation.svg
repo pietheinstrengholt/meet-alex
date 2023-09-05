@@ -1,0 +1,186 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg id="splash_svg" width="360" height="160" viewBox="0 20 360 160" version="1.1" xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink">
+
+       <!-- relation arrowhead -->
+              <defs>
+                <marker id='head' orient="auto"
+                  markerWidth='2' markerHeight='4'
+                  refX='0.1' refY='2'>
+                  <!-- triangle pointing right (+x) -->
+                  <path d='M0,0 V4 L2,2 Z' fill="grey"/>
+                </marker>
+              </defs>
+
+<!-- Arrow scroll down -->
+    <g class="arrows" transform="translate(0, -140)">
+      <path class="arrow1" d="M160 160 L180 170 L200 160"></path>
+      <path class="arrow2" d="M160 170 L180 180 L200 170"></path>
+      <path class="arrow3" d="M160 180 L180 190 L200 180"></path>
+    </g>
+
+<!-- Pyramids =(collection A and B) with cross-pyramid relation -->
+    <image id="splash_pyramidA" x="125" y="65" width="120" height="106.8" xlink:href="pyramid.svg" />
+    <image id="splash_pyramidB" x="125" y="65" width="120" height="106.8" xlink:href="pyramid.svg" />
+
+<!-- cross-pyramid relation -->
+    <line id="splash_line_relationAB" class="splash_line_relation" x1="65" y1="135" x2="250" y2="135" marker-end='url(#head)' style="visibility: hidden;" />
+    <g id="splash_relationboxAB" style="visibility: hidden;">
+      <rect class="splash_relationbox" x="150" y="130" rx="2" ry="2" opacity="1" width="60" height="10" />
+      <text class="splash_relationtext" x="150" y="130" dx="30" dy="8">is same as</text>
+    </g>
+
+<!-- Fruit collection of terms -->
+    <!-- Relation between Tomato and Fruit in the Fruit collection -->
+    <line id="splash_line_relationA" class="splash_line_relation" x1="65" y1="135" x2="65" y2="85" marker-end='url(#head)' style="visibility: hidden;" />
+    <g id="splash_relationA" style="visibility: hidden;">
+      <rect class="splash_relationbox" x="45" y="107" rx="2" ry="2" width="40" height="10" />
+      <text class="splash_relationtext" x="45" y="107" dx="20" dy="8">is a</text>
+    </g>
+    <!-- Tomato in the Fruit collection -->
+    <g id="splash_termA1" style="visibility: hidden;">
+      <rect x="30" y="125" rx="5" ry="5" width="70" height="20" class="softbox"/>
+      <text class="splash_termtext" x="30" y="125" dx="35" dy="13">Tomato</text>
+    </g>
+    <!-- Fruit in the Fruit collection -->
+    <g id="splash_termA2" style="visibility: hidden;">
+      <rect x="30" y="60" rx="5" ry="5" width="70" height="20" class="softbox"/>
+      <text class="splash_termtext" x="30" y="60" dx="35" dy="13">Fruit</text>
+    </g>
+
+<!-- Vegetable collection of terms -->
+    <!-- Relation between Tomato and Vegetable in the Vegetable collection -->
+    <line id="splash_line_relationB" class="splash_line_relation" x1="305" y1="135" x2="305" y2="85" marker-end='url(#head)' style="visibility: hidden;" />
+    <g id="splash_relationB" style="visibility: hidden;">
+      <rect class="splash_relationbox" x="285" y="107" rx="2" ry="2" width="40" height="10" />
+      <text class="splash_relationtext" x="285" y="107" dx="20" dy="8">is a</text>
+    </g>
+    <!-- Tomato in the Vegetable collection -->
+    <g id="splash_termB1" style="visibility: hidden;">
+      <rect x="270" y="125" rx="5" ry="5" width="70" height="20" class="softbox"/>
+      <text class="splash_termtext" x="270" y="125" dx="35" dy="13">Tomato</text>
+    </g>
+    <!-- Vegetable in the Vegetable collection -->
+    <g id="splash_termB2" style="visibility: hidden;">
+      <rect x="270" y="60" rx="5" ry="5" width="70" height="20" class="softbox"/>
+      <text class="splash_termtext" x="270" y="60" dx="35" dy="13">Vegetable</text>
+    </g>
+
+<!-- Tagline -->
+  <text id="splash_tagline" class="splash_tagline_text" x="185" y="65" style="visibility: hidden;">
+    <tspan x="185" dy="0">Describe your data.</tspan>
+    <tspan x="185" dy="16">And connect</tspan>
+    <tspan x="185" dy="16">to the interpretation</tspan>
+    <tspan x="185" dy="16">of others.</tspan>
+  </text>
+
+
+
+  <style type="text/css">
+
+    #splash_svg {
+      margin-left:auto;
+      margin-right:auto;
+      display:block;
+    }
+    .splash_line_relation {
+      fill: #fff; stroke:grey; stroke-width:2;
+    }
+    .splash_line_relation:hover {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 1000;
+      stroke-width: 4;
+    }
+    .splash_relationbox {
+      fill:grey; stroke:grey; stroke-width:1;
+    }
+    .splash_relationtext {
+      font-family:arial; font-size:8px; text-anchor:middle; fill:white;
+    }
+    .splash_termtext {
+      font-family:arial; font-size:10px; text-anchor:middle; fill:black;
+    }
+    .splash_tagline_text {
+      font-family:arial; font-size:14px; text-anchor:middle; fill:white;
+    }
+    .softbox {
+      fill: #fff; stroke:#75B1E3; stroke-width:1;
+    }
+
+    @-webkit-keyframes movingPyramidA {
+			0% { transform: scale(1, 1) translate3d(0px, 0px, 0px); }
+      15% { transform: scale(1, 1) translate3d(0px, 0px, 0px); }
+			100% { transform: scale(1, 1) translate3d(-115px, 0px, 0px); }
+		}
+		#splash_pyramidA {
+			-webkit-animation:movingPyramidA 6s;
+      -webkit-animation-fill-mode: forwards;
+      -webkit-animation-play-state: running; /* Safari 4.0 - 8.0 */
+      animation-play-state: running;
+		}
+    @-webkit-keyframes movingPyramidB {
+			0% { transform: scale(1, 1) translate3d(0px, 0px, 0px); }
+      15% { transform: scale(1, 1) translate3d(0px, 0px, 0px); }
+			100% { transform: scale(1, 1) translate3d(125px, 0px, 100px); }
+		}
+		#splash_pyramidB {
+			-webkit-animation:movingPyramidB 6s;
+      -webkit-animation-fill-mode: forwards;
+		}
+
+// arrow scroll down
+    .arrows {
+    	width: 60px;
+    	height: 72px;
+    	position: absolute;
+    	left: 50%;
+    	margin-left: -30px;
+    	bottom: 20px;
+    }
+
+    .arrows path {
+    	stroke: #75B1E3;
+    	fill: transparent;
+    	stroke-width: 1px;
+    	animation: arrowmotion 2s infinite;
+    	-webkit-animation: arrowmotion 2s infinite;
+    }
+
+    @keyframes arrowmotion
+    {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+    }
+
+    @-webkit-keyframes arrowmotion /*Safari and Chrome*/
+    {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+    }
+
+    .arrows path.arrow1 {
+      opacity:0;
+    	animation-delay:4s;
+    	-webkit-animation-delay:4s; /* Safari and Chrome */
+    }
+    .arrows path.arrow2 {
+      opacity:0;
+    	animation-delay:4.5s;
+    	-webkit-animation-delay:4.5s; /* Safari and Chrome */
+    }
+    .arrows path.arrow3 {
+      opacity:0;
+    	animation-delay:5s;
+    	-webkit-animation-delay:5s; /* Safari and Chrome */
+    }
+
+  </style>
+
+</svg>
