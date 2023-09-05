@@ -395,7 +395,7 @@ class CollectionController extends Controller
 		}
 
 		$collection->update($request->all());
-		return Redirect::route('collections.show', $collection->slug)->with('message', 'Collection updated.');
+		return Redirect::route('collections.show', $collection->id)->with('message', 'Collection updated.');
 	}
 
 	public function destroy(Collection $collection)

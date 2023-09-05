@@ -85,7 +85,7 @@ class GroupController extends Controller
 		]);
 
 		$group->update($request->all());
-		return Redirect::route('groups.show', $group->slug)->with('message', 'Group updated.');
+		return Redirect::route('groups.show', $group->id)->with('message', 'Group updated.');
 	}
 
 	public function destroy(Group $group)

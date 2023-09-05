@@ -48,7 +48,7 @@ class AuthServiceProvider extends ServiceProvider
 			}
 		});
 
-		$gate->define('contribute-to-collection', function ($user, $collection) {
+		$gate->define('contribute-to-collection', function ($user) {
 			if ($user->role === "admin") {
 				return true;
 				exit();

@@ -54,6 +54,7 @@ APPLICATION REQUIREMENTS
 * Mbstring PHP Extension
 * Tokenizer PHP Extension
 * Zip PHP Extension
+* Curl enabled (install phpX.X-curl and uncomment ;extension=curl in your php.ini)
 * Composer
 * Git
 * NodeJS, be sure that both `node -v` and `npm -v` are working

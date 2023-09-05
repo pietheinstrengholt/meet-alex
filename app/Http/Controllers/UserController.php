@@ -107,7 +107,7 @@ class UserController extends Controller
 		}
 
 		//get all collections where the user has permissions on
-		$collections = $this->authService->getReadableCollections();
+		$collections = app('auth.manager')->getReadableCollections();
 
 		return view('users.bookmarks', compact('collections'));
 	}

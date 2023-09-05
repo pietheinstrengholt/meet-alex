@@ -80,7 +80,7 @@ class StatusController extends Controller
 		]);
 
 		$status->update($request->all());
-		return Redirect::route('statuses.show', $status->slug)->with('message', 'Status updated.');
+		return Redirect::route('statuses.show', $status->id)->with('message', 'Status updated.');
 	}
 
 	public function destroy(Status $status)

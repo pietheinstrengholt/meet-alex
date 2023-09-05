@@ -80,7 +80,7 @@ class DefaultRelationController extends Controller
 		]);
 
 		$defaultRelation->update($request->all());
-		return Redirect::route('defaultrelations.show', $defaultRelation->slug)->with('message', 'Relation updated.');
+		return Redirect::route('defaultrelations.show', $defaultRelation->id)->with('message', 'Relation updated.');
 	}
 
 	public function destroy(DefaultRelation $defaultRelation)
