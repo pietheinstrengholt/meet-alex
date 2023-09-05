@@ -12,6 +12,11 @@
         "phpSniffer.run": "onSave"
     },
 
+	"containerEnv": {
+		"APP_URL": "https://${localEnv:CODESPACE_NAME}-8000.${localEnv:GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}",
+		"SESSION_DOMAIN": "${localEnv:CODESPACE_NAME}-8000.${localEnv:GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}",
+	},
+
 	// Uncomment the next line if you want to publish any ports.
 	"forwardPorts": [8000],
 

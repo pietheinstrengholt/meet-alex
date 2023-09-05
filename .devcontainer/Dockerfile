@@ -37,20 +37,20 @@ RUN apt-get update \
 
 # Install Composer from: https://hub.docker.com/_/composer
 COPY --from=composer /usr/bin/composer /usr/bin/composer
-RUN  echo 'export PATH="$PATH:$HOME/.composer/vendor/bin:/root/.composer/vendor/bin:vendor/bin"' >> /root/.bashrc
-RUN  curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN  apt-get install -y nodejs
+RUN echo 'export PATH="$PATH:$HOME/.composer/vendor/bin:/root/.composer/vendor/bin:vendor/bin"' >> /root/.bashrc
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install -y nodejs
 RUN apt-get install -y libzip-dev \
     && docker-php-ext-configure zip  \
     && docker-php-ext-install zip \
     && docker-php-ext-install bcmath mysqli pdo pdo_mysql
-RUN  su $USERNAME -c "composer global require laravel/installer"
-RUN  echo "alias art='php artisan'" >> /root/.bashrc && \
-     echo "alias serve='php artisan serve --port=8000 --host=0.0.0.0'" >> /root/.bashrc && \
-     echo "alias ls='ls -B -h --color=auto -ltr'" >> /root/.bashrc && \
-     echo "alias _='sudo'" >> /root/.bashrc  && \
-     echo "alias apt='sudo apt'" >> /root/.bashrc  && \
-     echo "alias apt-get='sudo apt-get'" >> /root/.bashrc
+RUN su $USERNAME -c "composer global require laravel/installer"
+RUN echo "alias art='php artisan'" >> /root/.bashrc && \
+    echo "alias serve='php artisan serve --port=8000 --host=0.0.0.0'" >> /root/.bashrc && \
+    echo "alias ls='ls -B -h --color=auto -ltr'" >> /root/.bashrc && \
+    echo "alias _='sudo'" >> /root/.bashrc  && \
+    echo "alias apt='sudo apt'" >> /root/.bashrc  && \
+    echo "alias apt-get='sudo apt-get'" >> /root/.bashrc
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=
