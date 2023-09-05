@@ -74,9 +74,11 @@ class AuthServiceProvider extends ServiceProvider
 			}
 
 			//check if user is linked to the collection
-			if (Auth::user()->collections->contains($collection)) {
-				return true;
-				exit();
+			if (!empty($collection)) {
+				if (Auth::user()->collections->contains($collection)) {
+					return true;
+					exit();
+				}
 			}
 		});
 
