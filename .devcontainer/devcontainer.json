@@ -3,6 +3,7 @@
 {
 	"name": "PHP 7",
     "dockerComposeFile": "docker-compose.yml",
+	"workspaceFolder": "/workspace",
     "service": "php",
     // Use 'settings' to set *default* container specific settings.json values on container create.
 	// You can edit these settings after create using File > Preferences > Settings > Remote.
@@ -21,7 +22,7 @@
 	"forwardPorts": [8000],
 
 	// Uncomment the next line to run commands after the container is created.
-	"postCreateCommand": "cp .env.example .env && composer install && php artisan key:generate && php artisan migrate",
+	"postCreateCommand": "cp .env.example .env && composer install && php artisan key:generate && php artisan migrate && php artisan serve --port=8000 --host=0.0.0.0",
 
 	// Uncomment the next line to use a non-root user. On Linux, this will prevent
 	// new files getting created as root, but you may need to update the USER_UID
