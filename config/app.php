@@ -175,7 +175,7 @@ return [
 		Collective\Html\HtmlServiceProvider::class,
 		Maatwebsite\Excel\ExcelServiceProvider::class,
 		Laravel\Socialite\SocialiteServiceProvider::class,
-		Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+		Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
 		// ...
 
     ],

@@ -55,7 +55,7 @@ APPLICATION REQUIREMENTS
 * Tokenizer PHP Extension
 * Zip PHP Extension
 * Curl enabled (install phpX.X-curl and uncomment ;extension=curl in your php.ini)
-* Composer
+* Composer 2.6 or higher
 * Git
 * NodeJS, be sure that both `node -v` and `npm -v` are working
 
