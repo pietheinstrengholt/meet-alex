@@ -168,60 +168,6 @@
 			</div>
 		@endif
 
-
-		<!-- Collection graph begin ####################################################################################### -->
-		<?php
-			$relatedcollections = array();
-			$svg_canvas_height = 0;
-			$svg_canvas_height_dy = 20;
-			$svg_min_canvas_height = 120;
-			$svg_line_height = 110;
-			$svg_line_anchor_dy = 50;
-		?>
-		@foreach($terms as $key => $term)
-			@if (!empty($term->objects) || !empty($term->subjects))
-				@foreach($term->objects as $key => $object)
-					@if ($object->object && $object->object->collection_id != $collection->id)
-							<?php
-								$relatedcollections += array($object->object->collection_id => $object->object->collection->short_name);
-							?>
-					@endif
-				@endforeach
-				@foreach($term->subjects as $key => $subject)
-					@if ($subject->subject && $subject->subject->collection_id != $collection->id)
-							<?php
-								$relatedcollections += array($subject->subject->collection_id => $subject->subject->collection->short_name);
-							?>
-					@endif
-				@endforeach
-			@endif
-		@endforeach
-		<?php $svg_canvas_height = max($svg_canvas_height_dy + count($relatedcollections) * $svg_line_height, $svg_min_canvas_height); ?>
-
-		<svg width="400" height="{{ $svg_canvas_height }}" viewBox="0 -15 400 {{ $svg_canvas_height }}" version="1.1" xmlns="http://www.w3.org/2000/svg"
-		      xmlns:xlink="http://www.w3.org/1999/xlink">
-			<?php
-				$i = 0;
-				foreach ($relatedcollections as $rc_id=>$rc_name ) {
-							$j = $i + $svg_line_anchor_dy;
-							echo "<line x1='100' y1='50' x2='300' y2='$j' class='collection_graph_line' />";
-							echo "<image x='250' y='$i' width='120' height='106.8' xlink:href='../../img/pyramid.svg' />";
-							echo "<a onclick='trackClick(this)' xlink:href='$rc_id'>";
-							echo "<text x='250' y='$i' dx='55' dy='100' class='collection_graph_text' >$rc_name</text>";
-							echo "</a>";
-							$i = $i + $svg_line_height;
-				}
-			?>
-
-			<!-- This collection -->
-		  <image x="65" y="0" width="120" height="106.8" xlink:href="../../img/pyramid.svg" />
-			<text x="65" y="0" dx="55" dy="100" class='collection_graph_text'>{{ $collection->short_name }}</text>
-
-		</svg>
-		<!-- Collection graph end ####################################################################################### -->
-
-
-
 		{{-- Pagination with all letters --}}
 		@if ( !empty($letters) )
 			<div class="text-center">

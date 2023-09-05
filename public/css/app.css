@@ -151,6 +151,7 @@ span.twitter-typeahead {
 
 ul.breadcrumb li.right.dropdown {
 	float: right;
+	margin-right: 2px;
 }
 
 ul.breadcrumb li.right.dropdown a {

@@ -87,6 +87,9 @@ class CollectionController extends Controller
 		//get all group names
 		$groups = Group::orderBy('group_name', 'asc')->get();
 
+		//get all statuses
+		$statuses = Status::orderBy('status_name', 'asc')->get();
+
 		//collections for parenting, only get collections where the user has rights on
 		$collections = app('auth.manager')->getEditableCollections();
 
@@ -182,6 +185,9 @@ class CollectionController extends Controller
 		//get stars based on the terms
 		$stars = $this->returnStarsArray($terms);
 
+		$fullscreen = null;
+		$modelView = null;
+
 		// if visualShow paremeter is given, the visual will be started with the complete model
 		if ($request->has('visualShow')) {
 			$fullscreen = true;
@@ -207,6 +213,9 @@ class CollectionController extends Controller
 		$terms = $this->filterTerms($letter, $terms);
 		//get stars based on the terms
 		$stars = $this->returnStarsArray($terms);
+
+		$fullscreen = null;
+		$modelView = null;
 
 		// if visualShow paremeter is given, the visual will be started with the complete model
 		if ($request->has('visualShow')) {

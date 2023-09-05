@@ -34,7 +34,7 @@ class SettingController extends Controller
 			}
 		}
 
-		return view('settings.index', compact('config_array','scanned_img_directory','scanned_css_directory'));
+		return view('settings.index', compact('config_array'));
 	}
 
 	public function store(Request $request)
